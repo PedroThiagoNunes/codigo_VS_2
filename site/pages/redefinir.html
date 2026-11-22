@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<title>Redefinir senha</title>
+</head>
+<body>
+<img class="logo" src="../img/logo.png" alt="Logo" onerror="this.remove()">
+<h1>Redefinir senha</h1>
+<p class="sub">Crie uma nova senha para sua conta.</p>
+<form class="login-form" id="formRedefinir" novalidate>
+  <div><label for="novaSenha">Nova senha</label><input id="novaSenha" type="password" autocomplete="new-password"></div>
+  <div><label for="confirmarSenha">Confirmar senha</label><input id="confirmarSenha" type="password" autocomplete="new-password"></div>
+  <span id="mensagem" class="msg" role="alert"></span>
+  <button type="submit">Salvar nova senha</button>
+</form>
+<script src="../js/seguranca.js"></script>
+<script src="../js/redefinir.js"></script>
+</body>
+</html>

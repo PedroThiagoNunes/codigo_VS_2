@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finalizar Compra</title>
+    <link rel="stylesheet" href="/site/css/finalizar.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Finalizar Compra</h1>
+        <p>Estamos quase lá! Confira seu pedido.</p>
+    </header>
+
+    <main>
+
+        <section class="produtos">
+
+            <h2>🛍️ Resumo do Pedido</h2>
+
+            <div class="data-pedido">
+                <strong>Data e horário do pedido:</strong>
+                <span id="dataHora"></span>
+            </div>
+
+            <ul id="resumoCarrinho"></ul>
+
+            <div class="resumo-valores">
+
+                <p>
+                    Subtotal:
+                    <strong id="subtotal">R$ 0,00</strong>
+                </p>
+
+                <p>
+                    Desconto:
+                    <strong id="descontoTotal">R$ 0,00</strong>
+                </p>
+
+                <h2 id="totalCompra">Total: R$ 0,00</h2>
+
+            </div>
+
+            <div class="pagamento">
+
+                <h2>💳 Forma de Pagamento</h2>
+
+                <label for="formaPagamento">
+                    Escolha como deseja pagar:
+                </label>
+
+                <select id="formaPagamento">
+                    <option value="">Selecione uma forma de pagamento</option>
+                    <option value="Pix">Pix</option>
+                    <option value="Cartão de Crédito">Cartão de Crédito</option>
+                    <option value="Cartão de Débito">Cartão de Débito</option>
+                    <option value="Dinheiro">Dinheiro</option>
+                </select>
+
+            </div>
+
+            <button onclick="confirmarPedido()">
+                Confirmar Pedido
+            </button>
+
+            <button onclick="voltarLoja()">
+                Voltar para a Loja
+            </button>
+
+        </section>
+
+    </main>
+
+    
+    <script src="/site/js/finalizar.js"></script>
+</body>
+</html>

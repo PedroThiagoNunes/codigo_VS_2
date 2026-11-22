@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/site/css/style.css">
+<title>Login</title>
+</head>
+<body>
+<img class="logo" src="/site/img/logo.png" alt="Logo" onerror="this.remove()">
+<h1>Entrar</h1>
+<p class="sub">Acesse sua conta.</p>
+<form class="login-form" id="formLogin" novalidate>
+  <div><label for="email">E-mail</label><input id="email" type="email" autocomplete="email"></div>
+  <div><label for="senha">Senha</label><input id="senha" type="password" autocomplete="current-password"></div>
+  <div class="opcoes"><a href="/site/pages/redefinir.html">Esqueceu a senha?</a></div>
+  <span id="erro" class="msg" role="alert"></span>
+  <button type="submit">Entrar</button>
+  <span id="sugestao" class="msg"></span>
+  <div class="rodape">Não tem uma conta? <a href="/site/pages/cadastro.html">Cadastre-se</a></div>
+</form>
+<script src="/site/js/seguranca.js"></script>
+<script src="/site/js/login.js"></script>
+</body>
+</html>

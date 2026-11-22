@@ -1,0 +1,372 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --vinho: #6b1230;
+    --vinho-escuro: #4f0c23;
+    --dourado: #d4a95a;
+    --dourado-claro: #e8d3a3;
+    --creme: #f5f1ea;
+    --texto: #3a2a30;
+    --texto-suave: #7a6a70;
+    --borda: #d9cfc6;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background: radial-gradient(circle at 50% 0%, #fffaf0, var(--creme) 60%, #ebe4d8);
+    color: var(--texto);
+    min-height: 100vh;
+    padding: 30px;
+}
+
+/* CABEÇALHO */
+
+header {
+    max-width: 1200px;
+    margin: 0 auto 30px;
+}
+
+.cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+.cabecalho .logo {
+    width: 150px;
+    height: 120px;
+    object-fit: contain;
+}
+
+.titulo-loja {
+    text-align: left;
+}
+
+header h1 {
+    color: var(--vinho);
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+
+header p {
+    color: var(--texto-suave);
+    margin-top: 8px;
+}
+
+/* PESQUISA */
+
+.pesquisa {
+    max-width: 650px;
+    margin: 0 auto 35px;
+    position: relative;
+}
+
+.pesquisa input {
+    width: 100%;
+    padding: 16px 50px 16px 18px;
+    border: 1.5px solid var(--borda);
+    border-radius: 12px;
+    background: #fffdfa;
+    font-family: inherit;
+    font-size: 0.95rem;
+    outline: none;
+}
+
+.pesquisa input:focus {
+    border-color: var(--dourado);
+    box-shadow: 0 0 0 4px rgba(212, 169, 90, 0.2);
+}
+
+.pesquisa span {
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* ORGANIZAÇÃO PRINCIPAL */
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: 30px;
+    max-width: 1300px;
+    margin: auto;
+    align-items: start;
+}
+
+/* ÁREA DOS PRODUTOS */
+
+.produtos {
+    background: white;
+    padding: 30px;
+    border-radius: 18px;
+    border-top: 6px solid var(--vinho);
+    box-shadow: 0 14px 34px rgba(107, 18, 48, 0.15);
+}
+
+.produtos h2,
+.carrinho h2 {
+    color: var(--vinho);
+    margin-bottom: 25px;
+    text-align: center;
+    font-weight: 800;
+}
+
+/* LISTA DE PRODUTOS */
+
+.lista-produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 20px;
+}
+
+/* CARD DOS PRODUTOS */
+
+.produto {
+    background: #fffdfa;
+    border: 1.5px solid var(--borda);
+    border-radius: 12px;
+    padding: 18px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.produto:hover {
+    border-color: var(--dourado);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(107, 18, 48, 0.12);
+}
+
+/* IMAGENS DOS PRODUTOS */
+
+.produto img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.produto h3 {
+    color: var(--vinho);
+    font-size: 1rem;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.produto p {
+    color: var(--texto-suave);
+    font-weight: 700;
+    margin-bottom: 18px;
+    font-size: 0.95rem;
+}
+
+/* BOTÕES */
+
+button {
+    width: 100%;
+    padding: 13px;
+    border: 2px solid var(--vinho-escuro);
+    border-radius: 10px;
+    background: linear-gradient(180deg, var(--vinho), var(--vinho-escuro));
+    color: var(--dourado-claro);
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    color: white;
+    box-shadow: 0 6px 16px rgba(107, 18, 48, 0.25);
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* CARRINHO */
+
+.carrinho {
+    background: white;
+    padding: 28px 22px;
+    border-radius: 18px;
+    border-top: 6px solid var(--vinho);
+    box-shadow: 0 14px 34px rgba(107, 18, 48, 0.18);
+    position: sticky;
+    top: 20px;
+}
+
+.carrinho ul {
+    list-style: none;
+    margin-bottom: 20px;
+    max-height: 350px;
+    overflow-y: auto;
+}
+
+.carrinho li {
+    background: #fffdfa;
+    border: 1px solid var(--borda);
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 10px;
+    font-size: 0.85rem;
+}
+
+#total {
+    color: var(--vinho);
+    text-align: center;
+    margin: 20px 0;
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+.carrinho button {
+    margin-top: 10px;
+}
+
+.carrinho button:last-child {
+    background: white;
+    color: var(--vinho);
+    border: 2px solid var(--vinho);
+}
+
+.carrinho button:last-child:hover {
+    background: var(--creme);
+}
+
+/* BARRA DE ROLAGEM */
+
+.carrinho ul::-webkit-scrollbar {
+    width: 6px;
+}
+
+.carrinho ul::-webkit-scrollbar-thumb {
+    background: var(--dourado);
+    border-radius: 10px;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 900px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    .carrinho {
+        position: static;
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 15px;
+    }
+
+    .cabecalho {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .titulo-loja {
+        text-align: center;
+    }
+
+    .cabecalho .logo {
+        width: 120px;
+        height: 100px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .produtos {
+        padding: 18px;
+    }
+
+    .lista-produtos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .produto {
+        padding: 12px;
+    }
+
+    .produto img {
+        height: 130px;
+    }
+
+    .produto h3 {
+        font-size: 0.85rem;
+    }
+
+    .produto p {
+        font-size: 0.85rem;
+    }
+
+    .produto button {
+        font-size: 0.72rem;
+        padding: 10px 5px;
+    }
+}
+
+
+/* PRODUTOS DENTRO DO CARRINHO */
+
+.carrinho li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #fffdfa;
+    border: 1px solid var(--borda);
+    border-radius: 12px;
+    padding: 12px;
+    margin-bottom: 12px;
+}
+
+.carrinho li img {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+    border-radius: 8px;
+    background: white;
+    border: 1px solid var(--borda);
+}
+
+.item-info {
+    flex: 1;
+}
+
+.item-info strong {
+    display: block;
+    color: var(--vinho);
+    font-size: 0.85rem;
+    margin-bottom: 6px;
+}
+
+.item-info span {
+    color: var(--texto-suave);
+    font-size: 0.8rem;
+}
+
+@media (max-width: 480px) {
+    .carrinho li img {
+        width: 55px;
+        height: 55px;
+    }
+}

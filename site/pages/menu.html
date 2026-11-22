@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css" integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+<title>Menu</title>
+<link rel="stylesheet" href="../css/menu.css">
+</head>
+<body>
+    <nav id="sidebar">
+        <div id="sidebar_content">
+            <div id="user">
+            <img src="/site/img/logo.png" alt="avatar" id="user_avatar">
+            <p id="users_info">
+                <span class="item-description">
+                     Alessandra vidal
+                </span>
+                <span class="item-description">
+                    de negreiros negrini
+                </span>
+            </p>        
+        </div>
+
+        <ul id="side_items">
+            <li class="side-item active">
+                <a href="#">
+                    <i class="fa-solid fa-chart-column"></i>
+                        <span class="item-description">
+                            Dashboard
+                        </span> 
+                    </i>
+                </a>
+            </li>
+
+             <li class="side-item">
+                <a href="#">
+                    <i class="fa-solid fa-hand-holding-dollar"></i>
+                        <span class="item-description">
+                            vendas
+                        </span> 
+                    </i>
+                </a>
+            </li>
+
+             <li class="side-item">
+                <a href="produtos.html" target="conteudo">
+                   <i class="fa-solid fa-barcode"></i>
+                        <span class="item-description">
+                            produtos
+                        </span> 
+                    </i>
+                </a>
+            </li>
+
+             <li class="side-item">
+                <a href="dashboard.html" target="conteudo">
+                    <i class="fa-solid fa-warehouse"></i>
+                        <span class="item-description">
+                            estoque
+                        </span> 
+                    </i>
+                </a>
+            </li>
+
+             <li class="side-item">
+                <a href="#">
+                    <i class="fa-solid fa-user-tie"></i>
+                        <span class="item-description">
+                            usuarios
+                        </span> 
+                    </i>
+                </a>
+            </li>
+
+             <li class="side-item">
+                <a href="#">
+                    <i class="fa-solid fa-gear"></i>
+                        <span class="item-description">
+                            configurações
+                        </span> 
+                    </i>
+                </a>
+            </li>
+        </ul>
+
+        <button id="btn_open">
+            <i id="btn_open_icon" class="fa-solid fa-chevron-right"></i>
+        </button></div>
+
+          <div id="logout">
+        <button id="btn_logout" type="submit">
+            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            <span class="item-description">logout</span>
+        </button>
+    </div>
+    </nav>
+
+  
+    <main>
+        
+        <iframe id="conteudo" name="conteudo" src="/site/pages/produtos.html" title="conteudo"></iframe>
+    </main>
+    <script src="/site/js/seguranca.js"></script>
+    <script src="/site/js/menu.js"></script>
+</body>
+</html>
