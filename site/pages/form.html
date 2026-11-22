@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/produtoBase.css">
+  <link rel="stylesheet" href="../css/form.css">
+</head>
+<body>
+  <div class="campo">
+    <label for="nome">Nome do produto</label>
+    <input id="nome" maxlength="80" placeholder="Ex.: Vinho Tinto Reserva 750ml">
+  </div>
+
+  <div class="campo">
+    <label for="categoria">Categoria</label>
+    <select id="categoria">
+      <option value="">Selecione…</option>
+      <option>Vinhos</option>
+      <option>Queijos</option>
+      <option>Acessórios</option>
+      <option>Kits e presentes</option>
+      <option>Outros</option>
+    </select>
+  </div>
+
+  <div class="grade">
+    <div class="campo">
+      <label for="custo">Custo (R$)</label>
+      <input id="custo" type="number" min="0" step="0.01" placeholder="0,00">
+    </div>
+    <div class="campo">
+      <label for="preco">Preço de venda (R$)</label>
+      <input id="preco" type="number" min="0" step="0.01" placeholder="0,00">
+    </div>
+  </div>
+
+  <div class="grade">
+    <div class="campo">
+      <label for="desconto">Desconto (%)</label>
+      <input id="desconto" type="number" min="0" max="90" step="1" placeholder="0">
+    </div>
+    <div class="campo">
+      <label for="estoque">Estoque</label>
+      <input id="estoque" type="number" min="0" step="1" placeholder="0">
+    </div>
+  </div>
+
+  <div class="margem">
+    <span>Valor final: <b id="final">R$ 0,00</b></span>
+    <span>Lucro por unidade: <b id="lucro">R$ 0,00</b></span>
+    <span>Margem: <b id="mg">0%</b></span>
+  </div>
+
+  <div class="campo">
+    <label for="descricao">Descrição</label>
+    <textarea id="descricao" maxlength="600" placeholder="Conte detalhes, origem, tamanho, cuidados…"></textarea>
+  </div>
+
+  <div class="campo">
+    <label for="foto">Foto do produto</label>
+    <input id="foto" type="file" accept="image/*">
+    <div class="dica">A imagem aparece na hora ao lado.</div>
+  </div>
+
+  <button type="button" id="salvar">CADASTRAR PRODUTO</button>
+  <div id="aviso"></div>
+
+  <script src="/site/js/form.js"></script>
+</body>
+</html>

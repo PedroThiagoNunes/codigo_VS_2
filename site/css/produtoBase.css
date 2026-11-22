@@ -1,0 +1,93 @@
+/* Base compartilhada: variáveis, reset, card do produto e botão */
+:root {
+  --vinho: #6b1230;
+  --vinho-escuro: #4f0c23;
+  --dourado: #d4a95a;
+  --dourado-claro: #e8d3a3;
+  --creme: #f5f1ea;
+  --texto: #3a2a30;
+  --texto-suave: #7a6a70;
+  --borda: #d9cfc6;
+  color-scheme: light;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background: #fff;
+  color: var(--texto);
+  padding: 20px;
+}
+
+.lista-produtos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 20px;
+}
+
+.produto {
+  background: #fffdfa;
+  border: 1.5px solid var(--borda);
+  border-radius: 12px;
+  padding: 18px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.produto:hover {
+  border-color: var(--dourado);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(107, 18, 48, 0.12);
+}
+
+.produto img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.produto h3 {
+  color: var(--vinho);
+  font-size: 1rem;
+  margin-bottom: 12px;
+  font-weight: 700;
+  word-break: break-word;
+}
+
+.produto p {
+  color: var(--texto-suave);
+  font-weight: 700;
+  margin-bottom: 18px;
+  font-size: 0.95rem;
+}
+
+button {
+  width: 100%;
+  padding: 13px;
+  border: 2px solid var(--vinho-escuro);
+  border-radius: 10px;
+  background: linear-gradient(180deg, var(--vinho), var(--vinho-escuro));
+  color: var(--dourado-claro);
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  color: #fff;
+  box-shadow: 0 6px 16px rgba(107, 18, 48, 0.25);
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: scale(0.98);
+}

@@ -1,0 +1,85 @@
+label {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--vinho);
+  margin-bottom: 6px;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 13px 14px;
+  border: 1.5px solid var(--borda);
+  border-radius: 10px;
+  background: #fffdfa;
+  font-family: inherit;
+  font-size: 0.9rem;
+  color: var(--texto);
+  outline: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--dourado);
+  box-shadow: 0 0 0 4px rgba(212, 169, 90, 0.2);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 110px;
+}
+
+.campo {
+  margin-bottom: 16px;
+}
+
+.grade {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.margem {
+  background: var(--creme);
+  border: 1.5px dashed var(--dourado);
+  border-radius: 10px;
+  padding: 12px 14px;
+  font-size: 0.82rem;
+  margin-bottom: 18px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.margem b {
+  color: var(--vinho);
+}
+
+.margem .neg {
+  color: #b3261e;
+}
+
+.dica {
+  font-size: 0.72rem;
+  color: var(--texto-suave);
+  margin-top: 5px;
+}
+
+#aviso {
+  margin-top: 14px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--vinho);
+  text-align: center;
+  min-height: 1.2em;
+}
+
+@media (max-width: 420px) {
+  .grade {
+    grid-template-columns: 1fr;
+  }
+}
